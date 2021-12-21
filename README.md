@@ -12,5 +12,5 @@ FEATURES:
 2. Simple bad language filtering rules.
 
 HOW TO USE:
-1. Go to .gitbaserc.
+1. Go to .firebaserc.
 2. replace The string following given instructions.
