@@ -10,3 +10,7 @@ TECH STACK:
 FEATURES:
 1. Google-auth single sign in.
 2. Simple bad language filtering rules.
+
+HOW TO USE:
+1. Go to .gitbaserc.
+2. replace The string following given instructions.
