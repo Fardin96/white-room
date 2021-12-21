@@ -1,0 +1,95 @@
+class Resort:
+    feature=[5]
+    Garden=0 
+    Pool=0
+    Deluxe=0
+
+    def __init__(self,name) :
+        self.name = name
+
+    # def 
+
+    def addRooms(self,registered_room):
+        self.registered_room= registered_room
+        if(self.feature[len(self.feature)]=='Pool view'):
+            self.Pool+=1
+        if(self.feature[len(self.feature)]=='Delux'):
+            self.Delux+=1
+        if(self.feature[len(self.feature)]=='Garden view'):
+            self.Garden+=1
+
+    def Room(self,*feature):
+        self.feature.append(feature)
+
+    def printDetails(self):
+        print('Resort Name:',self.name)
+        print('Total Number of rooms:',self.registered_room)
+        print('Pool view room numbers:',self.Pool)
+        print('Deluxe room numbers: ',self.Deluxe)
+        print('Garden view room numbers:',self.Garden)
+
+
+
+h = Resort("Sayeman") 
+h.addRooms(Room("Pool view")) 
+h.addRooms(Room("Pool view")) 
+h.addRooms(Room("Delux")) 
+r1 = Room("Garden view") 
+h.addRooms(r1) 
+print("=========================") 
+h.printDetails() 
+print("=========================") 
+h.addRooms(Room("Pool view")) 
+h.addRooms(Room("Sea view")) 
+h.addRooms(Room("Delux")) 
+r2 = Room("Garden view") 
+h.addRooms(r2) 
+print("=========================") 
+h.printDetails() 
+print("=========================") 
+h.addRooms(Room("Sea view")) 
+h.addRooms(Room("Garden view")) 
+r3 = Room("Garden view") 
+h.addRooms(Room("Delux")) 
+h.addRooms(r3) 
+print("=========================") 
+h.printDetails() 
+print("=========================") 
+
+
+
+
+
+
+
+
+
+
+
+
+
+h = Resort("Sayeman") 
+h.addRooms(Room("Pool view")) 
+h.addRooms(Room("Pool view")) 
+h.addRooms(Room("Delux")) 
+r1 = Room("Garden view") 
+h.addRooms(r1) 
+print("=========================") 
+h.printDetails() 
+print("=========================") 
+h.addRooms(Room("Pool view")) 
+h.addRooms(Room("Sea view")) 
+h.addRooms(Room("Delux")) 
+r2 = Room("Garden view") 
+h.addRooms(r2) 
+print("=========================") 
+h.printDetails() 
+print("=========================") 
+h.addRooms(Room("Sea view")) 
+h.addRooms(Room("Garden view")) 
+r3 = Room("Garden view") 
+h.addRooms(Room("Delux")) 
+h.addRooms(r3) 
+print("=========================") 
+h.printDetails() 
+print("=========================") 
