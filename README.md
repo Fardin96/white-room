@@ -7,4 +7,4 @@ FEATURES:
 
 HOW TO USE:
 1. Go to .firebaserc.
-2. replace The string following given instructions.
+2. Replace The string following given instructions.
