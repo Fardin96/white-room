@@ -8,6 +8,7 @@ import 'firebase/analytics';
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 firebase.initializeApp({
   //myConfig from firebase config
@@ -51,8 +52,7 @@ function SignIn() {
         Sign in with Google
       </button>
       <p>
-        Do not violate the community guidelines or you will be banned for your
-        whole FUCKING life!
+        Do not violate the community guidelines or you will be banned for life!
       </p>
     </>
   );
@@ -131,7 +131,12 @@ function ChatMessage(props) {
             photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'
           }
         />
+
         <p>{text}</p>
+
+        <CopyToClipboard text={text}>
+          <button className={'cp-btn'}>copy</button>
+        </CopyToClipboard>
       </div>
     </>
   );
