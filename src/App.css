@@ -138,6 +138,9 @@ p {
   align-items: center;
 }
 
+.message p {
+  word-break: break-word;
+}
 
 .sent {
   flex-direction: row-reverse;
