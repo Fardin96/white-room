@@ -9,6 +9,7 @@ import 'firebase/analytics';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { deleteCollection } from './utils/deleteAll';
 
 firebase.initializeApp({
   //myConfig from firebase config
@@ -23,7 +24,7 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
+// const analytics = firebase.analytics();
 
 function App() {
   const [user] = useAuthState(auth);
@@ -32,7 +33,10 @@ function App() {
     <div className='App'>
       <header>
         <h1>⚛️🔥💬</h1>
-        <SignOut />
+        <div className='header-buttons'>
+          <SignOut />
+          <ClearAll />
+        </div>
       </header>
 
       <section>{user ? <ChatRoom /> : <SignIn />}</section>
@@ -57,6 +61,29 @@ function SignIn() {
     </>
   );
 }
+
+
+function ClearAll() {
+  const handleClear = async () => {
+    if (window.confirm("Are you sure you want to delete ALL messages?")) {
+      try {
+        await deleteCollection(firestore, 'messages');
+        console.log('Collection successfully cleared!');
+      } catch (error) {
+        console.error('Error deleting collection:', error);
+      }
+    }
+  };
+
+  return (
+    auth.currentUser && (
+      <button className='sign-out' onClick={handleClear}>
+        Clear All
+      </button>
+    )
+  );
+}
+
 
 function SignOut() {
   return (
