@@ -33,6 +33,11 @@ body {
   background-color: rgb(40, 37, 53);
 }
 
+.header-buttons {
+  display: flex;
+  gap: 20px;
+}
+
 main {
   padding: 10px;
   height: 80vh;
@@ -83,7 +88,8 @@ input {
 }
 
 button {
-  background-color: #282c34; /* Green */
+  background-color: #282c34;
+  /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -110,7 +116,8 @@ button:disabled {
 
 
 
-ul, li {
+ul,
+li {
   text-align: left;
   list-style: none;
 }
@@ -141,6 +148,7 @@ p {
   background: #0b93f6;
   align-self: flex-end;
 }
+
 .received p {
   background: #e5e5ea;
   color: black;
@@ -157,7 +165,7 @@ img {
   font-size: 10px;
   margin: 10px;
   border-radius: 500px;
-  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-property: background-color, border-color, color, box-shadow, filter;
   transition-duration: .3s;
   border: 1px solid transparent;
   text-transform: uppercase;
@@ -167,8 +175,9 @@ img {
   padding: 16px 14px 18px;
   color: #616467;
   box-shadow: inset 0 0 0 2px #616467;
-  :hover{
-      color: #fff;
-      background-color: #616467;
+
+  :hover {
+    color: #fff;
+    background-color: #616467;
   }
 }
