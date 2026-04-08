@@ -11,6 +11,9 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { deleteCollection } from './utils/deleteAll';
 
+import { RiLogoutBoxRLine } from "react-icons/ri";
+import { GiBoltBomb } from "react-icons/gi";
+
 firebase.initializeApp({
   //myConfig from firebase config
   apiKey: 'AIzaSyBI0_Te602s6S0raG-WOHKxYVUt5s5m-5k',
@@ -77,8 +80,8 @@ function ClearAll() {
 
   return (
     auth.currentUser && (
-      <button className='sign-out' onClick={handleClear}>
-        Clear All
+      <button className='header-button' onClick={handleClear}>
+        <GiBoltBomb size={30}/>
       </button>
     )
   );
@@ -88,8 +91,8 @@ function ClearAll() {
 function SignOut() {
   return (
     auth.currentUser && (
-      <button className='sign-out' onClick={() => auth.signOut()}>
-        Sign Out
+      <button className='header-button' onClick={() => auth.signOut()}>
+        <RiLogoutBoxRLine size={30}/>
       </button>
     )
   );
